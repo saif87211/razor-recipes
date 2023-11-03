@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using razor_recipes.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<RecipeDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("DeafultConnetction")));
 
 var app = builder.Build();
 
