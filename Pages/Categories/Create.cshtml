@@ -1,0 +1,24 @@
+@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create Category";
+}
+
+
+<div class="container border border-1 p-5">
+    <h3>@ViewData["Title"]</h3>
+    <hr>
+    <div class="row">
+        <form action="" method="post">
+            <div class="mb-3">
+                <label class="form-label" asp-for="Category.Name">Name</label>
+                <input class="form-control" asp-for="Category.Name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Category.DisplayOrder">Display Order</label>
+                <input class="form-control" asp-for="Category.DisplayOrder">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 150px;">Create</button>
+        </form>
+    </div>
+</div>
