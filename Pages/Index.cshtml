@@ -4,21 +4,39 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row">
-    <div class="col-md-8 col-sm-12">
+<section class="row">
+    <div class="col-md-8">
         <!-- CATEGORY SLIDER START -->
         <div class="row py-2">
             <div class="col-12">
                 <div id="category-slider" class="text-center">
-                    <div>SOUTH-INDIAN</div>
-                    <div>VEG</div>
-                    <div>STREET FOOD</div>
-                    <div>CURRY</div>
-                    <div>CHICKEN</div>
-                    <div>BREAKFAST</div>
-                    <div>QUICK</div>
-                    <div>EASY</div>
-                    <div>PARATHA</div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">SOUTH-INDIAN</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">VEG</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">STREET FOOD</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">CURRY</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">CHICKEN</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">BREAKFAST</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">QUICK</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">EASY</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary px-1 mx-1">PARATHA</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,24 +47,34 @@
             <div class="col-12">
                 <div id="main-slider">
                     <div class="single-slide">
-                        <img width="700" height="500" src="~/images/Slider/Slider-1.jpg" alt="slider-img">
+                        <img src="~/images/Slider/Slider-1.jpg" class="img-fluid" alt="slider-img">
                     </div>
                     <div class="single-slide">
-                        <img width="700" height="500" src="~/images/Slider/Slider-2.jpg" alt="slider-img">
+                        <img src="~/images/Slider/Slider-2.jpg" class="img-fluid" alt="slider-img">
                     </div>
                     <div class="single-slide">
-                        <img width="700" height="500" src="~/images/Slider/Slider-3.jpg" alt="slider-img">
+                        <img src="~/images/Slider/Slider-3.jpg" class="img-fluid" alt="slider-img">
                     </div>
                     <div class="single-slide">
-                        <img width="700" height="500" src="~/images/Slider/Slider-4.jpg" alt="slider-img">
+                        <img src="~/images/Slider/Slider-4.jpg" class="img-fluid" alt="slider-img">
                     </div>
                 </div>
             </div>
         </div>
         <!-- MAIN SLIDER END-->
-
     </div>
-    <div class="col-md-4 d-sm-none">
 
+    <div class="col-md-4 d-md-block d-sm-none">
+        <!--SUBSRIBE BOX START-->
+        <div class="card text-center mx-3 mt-5">
+            <div class="card-header">SUBSCRIBE NOW</div>
+            <div class="card-body px-1 py-2">
+                <h5 class="card-title"><i class="bi bi-envelope-paper display-5"></i></h5>
+                <p class="card-text fs-4 fw-medium">Liked our recipe collection?</p>
+                <p class="fs-6">Subscribe to receive easy recipes in your inbox</p>
+                <a href="#" class="btn btn-primary fw-bold">SUBSCRIBE</a>
+            </div>
+        </div>
+        <!--SUBSRIBE BOX END-->
     </div>
-</div>
+</section>

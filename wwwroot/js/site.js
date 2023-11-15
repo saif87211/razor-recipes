@@ -3,14 +3,14 @@
 
 // Write your JavaScript code.
 $(function () {
+
+    //-------SLIDERS
+    
     $('#main-slider').slick({
         adaptiveHeight:true,
         autoplay:true,
-        centerMode:true,
-        centerPadding: '10px',
         dots:true,
         draggable:true,
-        fade:true,
         infinite:true,
         mobileFirst:true,
         pauseOnFocus:false,
@@ -19,6 +19,15 @@ $(function () {
     $('#category-slider').slick({
         autoplay:true,
         infinite:true,
-        slidesToShow: 6,
+        slidesToShow: 8,
+        slidesToScroll: 8,
+        variableWidth: true,
+        centerMode:true,
+        mobileFirst:true,
+        pauseOnFocus:false,
+    });
+    $('.single-slide').css({
+        'display':'flex',
+        'justify-content': 'center'
     });
 });
