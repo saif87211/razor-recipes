@@ -35,3 +35,10 @@ body {
 .toprate-slider > .slick-next{
   right: 0;
 }
+
+.category-badge{
+  line-height: 1.26rem;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 4px;
+}

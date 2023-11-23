@@ -29,6 +29,15 @@ $(function () {
         centerMode:true,
         mobileFirst:true,
         pauseOnFocus:false,
+        arrows:false,
+    });
+
+    $('.prev-category').on('click', function(){
+        $('#category-slider').slick('slickPrev');
+    });
+
+    $('.next-category').on('click', function(){
+        $('#category-slider').slick('slickNext');
     });
     
     $('#toprate-slider').slick({
