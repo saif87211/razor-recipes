@@ -27,3 +27,11 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.toprate-slider > .slick-prev{
+  left: 0;
+  z-index: 10;
+}
+.toprate-slider > .slick-next{
+  right: 0;
+}

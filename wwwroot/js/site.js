@@ -7,13 +7,17 @@ $(function () {
     //-------SLIDERS
     
     $('#main-slider').slick({
-        adaptiveHeight:true,
+        // adaptiveHeight:true,
         autoplay:true,
         dots:true,
         draggable:true,
         infinite:true,
         mobileFirst:true,
         pauseOnFocus:false,
+    });
+    $('.single-slide').css({
+        'display':'flex',
+        'justify-content': 'center'
     });
 
     $('#category-slider').slick({
@@ -26,8 +30,32 @@ $(function () {
         mobileFirst:true,
         pauseOnFocus:false,
     });
-    $('.single-slide').css({
-        'display':'flex',
-        'justify-content': 'center'
+    
+    $('#toprate-slider').slick({
+        dots:false,
+        mobileFirst:true,
+        pauseOnFocus:false,
+        infinite:false,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint : 1000,
+                settings :{
+                    slidesToShow:3
+                }
+            },
+            {
+                breakpoint : 800,
+                settings :{
+                    slidesToShow:2
+                }
+            },
+            {
+                breakpoint : 200,
+                settings :{
+                    slidesToShow:2
+                }
+            }
+        ]
     });
 });
