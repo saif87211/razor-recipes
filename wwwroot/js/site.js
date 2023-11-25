@@ -3,68 +3,103 @@
 
 // Write your JavaScript code.
 $(function () {
+  //-------SLIDERS
 
-    //-------SLIDERS
-    
-    $('#main-slider').slick({
-        // adaptiveHeight:true,
-        autoplay:true,
-        dots:true,
-        draggable:true,
-        infinite:true,
-        mobileFirst:true,
-        pauseOnFocus:false,
-    });
-    $('.single-slide').css({
-        'display':'flex',
-        'justify-content': 'center'
-    });
+  $("#main-slider").slick({
+    autoplay: true,
+    dots: true,
+    draggable: true,
+    infinite: true,
+    mobileFirst: true,
+    pauseOnFocus: false,
+    prevArrow:
+      '<div class="main-prev-btn"><i class="bi bi-chevron-left"></i></div>',
+    nextArrow:
+      '<div class="main-next-btn"><i class="bi bi-chevron-right"></i></div>',
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
+  });
 
-    $('#category-slider').slick({
-        autoplay:true,
-        infinite:true,
-        slidesToShow: 8,
-        slidesToScroll: 8,
-        variableWidth: true,
-        centerMode:true,
-        mobileFirst:true,
-        pauseOnFocus:false,
-        arrows:false,
-    });
+  $("#category-slider").slick({
+    slidesToShow: 5,
+    slidesToScroll: 12,
+    autoplay: true,
+    infinite: true,
+    variableWidth: true,
+    centerMode: true,
+    mobileFirst: true,
+    pauseOnFocus: false,
+    arrows: true,
+    prevArrow:
+      '<button class="btn btn-sm prev-category rounded-end-0 btn-light"><i class="bi bi-chevron-left"></i></button>',
+    nextArrow:
+      '<button class="btn btn-sm next-category rounded-start-0 btn-light"><i class="bi bi-chevron-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
+  });
 
-    $('.prev-category').on('click', function(){
-        $('#category-slider').slick('slickPrev');
-    });
-
-    $('.next-category').on('click', function(){
-        $('#category-slider').slick('slickNext');
-    });
-    
-    $('#toprate-slider').slick({
-        dots:false,
-        mobileFirst:true,
-        pauseOnFocus:false,
-        infinite:false,
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint : 1000,
-                settings :{
-                    slidesToShow:3
-                }
-            },
-            {
-                breakpoint : 800,
-                settings :{
-                    slidesToShow:2
-                }
-            },
-            {
-                breakpoint : 200,
-                settings :{
-                    slidesToShow:2
-                }
-            }
-        ]
-    });
+  $("#toprate-slider").slick({
+    dots: false,
+    mobileFirst: true,
+    pauseOnFocus: false,
+    infinite: false,
+    slidesToShow: 4,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
 });
