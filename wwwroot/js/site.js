@@ -46,12 +46,13 @@ $(function () {
     variableWidth: true,
     centerMode: true,
     mobileFirst: true,
+    swipeToSlide:true,
     pauseOnFocus: false,
     arrows: true,
     prevArrow:
-      '<button class="btn btn-sm prev-category rounded-end-0 btn-light"><i class="bi bi-chevron-left"></i></button>',
+      '<button class="btn btn-sm prev-category rounded-0 btn-light"><i class="bi bi-chevron-left"></i></button>',
     nextArrow:
-      '<button class="btn btn-sm next-category rounded-start-0 btn-light"><i class="bi bi-chevron-right"></i></button>',
+      '<button class="btn btn-sm next-category rounded-0 btn-light"><i class="bi bi-chevron-right"></i></button>',
     responsive: [
       {
         breakpoint: 1000,
@@ -80,6 +81,8 @@ $(function () {
     pauseOnFocus: false,
     infinite: false,
     slidesToShow: 4,
+    slidesToScroll: 4,
+    swipeToSlide:true,
     arrows: false,
     responsive: [
       {
