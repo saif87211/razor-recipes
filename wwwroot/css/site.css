@@ -62,3 +62,14 @@ body {
 .main-next-btn {
   right: 0;
 }
+
+.bg-img{
+  background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0.94) 50%, rgba(255,255,255,0) 70%),url('/images/Background/bg-1.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-cont{
+  font-size: 1.4rem;
+}
