@@ -83,7 +83,9 @@ $(function () {
     slidesToShow: 4,
     slidesToScroll: 4,
     swipeToSlide:true,
-    arrows: false,
+    arrows: true,
+    prevArrow: $('.top-rated-prev'),
+    nextArrow: $('.top-rated-next'),
     responsive: [
       {
         breakpoint: 1000,
