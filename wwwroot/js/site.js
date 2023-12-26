@@ -7,6 +7,7 @@ $(function () {
 
   $("#main-slider").slick({
     autoplay: true,
+    autoplaySpeed:9000,
     dots: true,
     draggable: true,
     infinite: true,
@@ -42,6 +43,7 @@ $(function () {
     slidesToShow: 5,
     slidesToScroll: 12,
     autoplay: true,
+    autoplayspeed:9000,
     infinite: true,
     variableWidth: true,
     centerMode: true,
