@@ -100,7 +100,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  /* color: #666; */
   border-radius: 50%;
   transition: all 0.3s;
   font-size: 1.1rem;

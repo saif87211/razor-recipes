@@ -52,9 +52,9 @@ $(function () {
     pauseOnFocus: false,
     arrows: true,
     prevArrow:
-      '<button class="btn btn-sm prev-category rounded-0 btn-light"><i class="bi bi-chevron-left"></i></button>',
+      '<a class="btn btn-sm prev-category rounded-0 btn-light"><i class="bi bi-chevron-left"></i></a>',
     nextArrow:
-      '<button class="btn btn-sm next-category rounded-0 btn-light"><i class="bi bi-chevron-right"></i></button>',
+      '<a class="btn btn-sm next-category rounded-0 btn-light"><i class="bi bi-chevron-right"></i></a>',
     responsive: [
       {
         breakpoint: 1000,
@@ -109,4 +109,39 @@ $(function () {
       },
     ],
   });
+
+
+  $("#new-recipe-slider").slick({
+    dots: false,
+    mobileFirst: true,
+    pauseOnFocus: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    swipeToSlide:true,
+    arrows: true,
+    prevArrow: $('.new-added-prev'),
+    nextArrow: $('.new-added-next'),
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+
 });
