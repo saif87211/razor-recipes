@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<section id="main-section">
+<section id="main-section" class="py-4">
     <div class="container-xxl">
         <!-- CATEGORY SLIDER START -->
         <div class="p-1 mb-3">
@@ -48,14 +48,23 @@
 
         <!-- MAIN SLIDER START-->
 
-        <div id="main-slider" style="width: 100%;">
-            <div class="single-slide">
+        <div id="main-slider">
+            <div class="single-slide bg-cover">
+                <div class="main-info">
+                    <h1 class="Text">Lorem, ipsum dolor.</h1>
+                </div>
                 <img src="~/images/Slider/Slider-1.jpg" class="img-fluid" alt="slider-img">
             </div>
-            <div class="single-slide">
+            <div class="single-slide bg-cover">
+                <div class="main-info">
+                    <h1 class="Text">Lorem, ipsum dolor.</h1>
+                </div>
                 <img src="~/images/Slider/Slider-2.jpg" class="img-fluid" alt="slider-img">
             </div>
-            <div class="single-slide">
+            <div class="single-slide bg-cover">
+                <div class="main-info">
+                    <h1 class="Text">Lorem, ipsum dolor.</h1>
+                </div>
                 <img src="~/images/Slider/Slider-4.jpg" class="img-fluid" alt="slider-img">
             </div>
         </div>
@@ -87,7 +96,7 @@
             <!-- SECTION TITLE -->
             <div class="section-title d-flex align-items-center justify-content-between border-bottom ms-4 my-2">
                 <h3 class="pt-3 fw-bolder">Pick Popular one</h3>
-                <div class="btn-group-sm d-lg-block d-sm-none">
+                <div class="btn-group-sm d-md-block d-sm-none">
                     <a class="btn btn-primary py-2 px-3 top-rated-prev">
                         <i class="bi bi-chevron-left"></i>
                     </a>
@@ -171,11 +180,11 @@
     </div>
 </section>
 
-<section id="makers-section" class="m-4 py-4">
+<section id="makers-section" class="py-4">
     <div class="row">
 
         <!-- SECTION TITLE -->
-        <div class="section-title py-1 border-bottom">
+        <div class="section-title py-1 mb-3 border-bottom">
             <h3 class="pt-3 fw-bolder">Meet the Makers</h3>
         </div>
 
@@ -301,7 +310,7 @@
     </div>
 </section>
 
-<section id="newrecipe-section" class="m-4 py-4">
+<section id="newrecipe-section" class="py-4">
     <div class="row">
         <div class="col-12">
             <!-- SECTION TITLE -->
@@ -349,7 +358,7 @@
 
                 <!-- SINGLE SLIDER -->
                 <div class="mx-2">
-                    <div class="card rounded-0 mx-2">
+                    <div class="card shadow rounded-0 mx-2">
                         <img src="~/images/Slider/Slider-1.jpg" class="card-img-top rounded-0" alt="French-Egg">
                         <div class="card-body pt-1 pb-3 px-4">
                             <h5 class="card-title my-3">French Egg with fries</h5>

@@ -63,6 +63,30 @@ body {
   right: 0;
 }
 
+.slick-slide {
+  position: relative;
+}
+.main-info{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.bg-cover::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #07294d none repeat scroll 0 0;
+  Opacity: 0.2;
+}
 
 /******* BACKGROUND IMAGE PART *******/
 .bg-img{
