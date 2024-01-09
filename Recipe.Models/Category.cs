@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace razor_recipes.Model;
+namespace Recipe.Models;
 public class Category
 {
     [Key]

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MySql.EntityFrameworkCore.Extensions;
-using razor_recipes.Model;
+using Recipe.Models;
 
-namespace razor_recipes.Data;
+namespace Recipe.DataAccess.Data;
 public class RecipeDbContext : DbContext
 {
     public RecipeDbContext(DbContextOptions<RecipeDbContext> options) :base(options)

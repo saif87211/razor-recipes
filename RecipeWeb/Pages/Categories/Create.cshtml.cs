@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using razor_recipes.Data;
-using razor_recipes.Model;
+using Recipe.DataAccess.Data;
+using Recipe.Models;
 namespace razor_recipes.Pages.Categories
 {
     public class CreateModel : PageModel
