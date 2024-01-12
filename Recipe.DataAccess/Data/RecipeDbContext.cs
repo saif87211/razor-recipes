@@ -5,6 +5,10 @@ using Recipe.Models;
 namespace Recipe.DataAccess.Data;
 public class RecipeDbContext : DbContext
 {
+    public RecipeDbContext()
+    {
+        
+    }
     public RecipeDbContext(DbContextOptions<RecipeDbContext> options) :base(options)
     {
         

@@ -7,7 +7,7 @@ namespace razor_recipes.Pages.Categories;
 public class IndexModel : PageModel
 {
     private readonly RecipeDbContext _db;
-    public IEnumerable<Category> categories { get; set; }
+    public IEnumerable<Category> categories { get; set; } = new List<Category>();
 
     public IndexModel(RecipeDbContext recipeDbContext)
     {
