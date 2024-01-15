@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Recipe.DataAccess.Data;
 using Recipe.Models;
 
-namespace razor_recipes.Pages.Categories;
+namespace razor_recipes.Pages.Admin.Categories;
 
 public class IndexModel : PageModel
 {

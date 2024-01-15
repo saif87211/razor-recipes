@@ -11,14 +11,24 @@
     <div class="row">
         <form action="" method="post">
             <div class="mb-3">
+                <div  class="text-danger" asp-validation-summary="ModelOnly"></div>
                 <label class="form-label" asp-for="Category.Name">Name</label>
                 <input class="form-control" asp-for="Category.Name">
+                <span asp-validation-for="Category.Name" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" asp-for="Category.DisplayOrder">Display Order</label>
                 <input class="form-control" asp-for="Category.DisplayOrder">
+                <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 150px;">Create</button>
         </form>
     </div>
 </div>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
