@@ -29,6 +29,7 @@ public class EditModel : PageModel
             {
                 _db.Category.Update(Category);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Category Edited Succesfully.";
                 return RedirectToPage("Index");
             }
             return Page();

@@ -28,6 +28,7 @@ namespace razor_recipes.Pages.Admin.Categories
             if(ModelState.IsValid){
                 await _db.Category.AddAsync(Category);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Category Created Succesfully.";
                 return RedirectToPage("Index");
             }
             return Page();
