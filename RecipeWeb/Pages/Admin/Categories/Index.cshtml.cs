@@ -6,16 +6,16 @@ namespace razor_recipes.Pages.Admin.Categories;
 
 public class IndexModel : PageModel
 {
-    private readonly RecipeDbContext _db;
+    private readonly IUnitOfWork _unitOfWork;
     public IEnumerable<Category> categories { get; set; } = new List<Category>();
 
-    public IndexModel(RecipeDbContext recipeDbContext)
+    public IndexModel(IUnitOfWork unitOfWork)
     {
-        _db = recipeDbContext;
+        _unitOfWork = unitOfWork;
     }
 
     public void OnGet()
     {
-        categories = _db.Category.ToList();
+        categories = _unitOfWork.Category.GetAll();
     }
 }

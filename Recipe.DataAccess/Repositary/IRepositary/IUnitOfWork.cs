@@ -1,5 +1,5 @@
 public interface IUnitOfWork:IDisposable
 {
-    ICategory category{get;}
-    void Complete();
+    ICategory Category{get;}
+    void Save();
 }

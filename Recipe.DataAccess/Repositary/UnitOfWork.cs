@@ -4,14 +4,14 @@ public class UnitOfWork : IUnitOfWork, IDisposable
 {
     private readonly RecipeDbContext _db;
 
-    public ICategory category {get; private set;}
+    public ICategory Category {get; private set;}
 
     public UnitOfWork(RecipeDbContext recipeDb)
     {
         _db =recipeDb;
-        category = new CategoryRepositary(recipeDb);
+        Category = new CategoryRepositary(recipeDb);
     }
-    public void Complete()
+    public void Save()
     {
         _db.SaveChanges();
     }

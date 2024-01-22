@@ -6,14 +6,14 @@ namespace razor_recipes.Pages.Admin.Categories
 {
     public class CreateModel : PageModel
     {
-        private readonly RecipeDbContext _db;
+        private readonly IUnitOfWork _unitOfWork;
 
         [BindProperty]
         public Category Category { get; set; }
         
-        public CreateModel(RecipeDbContext dbContext)
+        public CreateModel(IUnitOfWork unitOfWork)
         {
-            _db = dbContext;
+            _unitOfWork = unitOfWork;
         }
         public void OnGet()
         {
@@ -26,8 +26,8 @@ namespace razor_recipes.Pages.Admin.Categories
                 ModelState.AddModelError(string.Empty,"The Displayorder cannot Exactly match the name.");
             }
             if(ModelState.IsValid){
-                await _db.Category.AddAsync(Category);
-                await _db.SaveChangesAsync();
+                _unitOfWork.Category.Add(Category);
+                _unitOfWork.Save();
                 TempData["success"] = "Category Created Succesfully.";
                 return RedirectToPage("Index");
             }

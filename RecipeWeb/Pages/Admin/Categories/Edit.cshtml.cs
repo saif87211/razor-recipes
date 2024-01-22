@@ -6,32 +6,32 @@ using Recipe.Models;
 namespace razor_recipes.Pages.Admin.Categories;
 public class EditModel : PageModel
 {
-    private RecipeDbContext _db;
+    private IUnitOfWork _unitOfWork;
     [BindProperty]
     public Category Category { get; set; }
-    public EditModel(RecipeDbContext dbContext)
+    public EditModel(IUnitOfWork unitOfWork)
     {
-        _db = dbContext;
+        _unitOfWork = unitOfWork;
     }
 
     public void OnGet(int id)
     {
-        Category = _db.Category.Find(id);
+        Category = _unitOfWork.Category.GetFirstOrDefault((c) => c.Id == id);
     }
 
     public async Task<IActionResult> OnPost()
+    {
+        if (Category.Name == Category.DisplayOrder.ToString())
         {
-            if(Category.Name == Category.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError(string.Empty,"The Displayorder cannot Exactly match the name.");
-            }
-            if(ModelState.IsValid)
-            {
-                _db.Category.Update(Category);
-                await _db.SaveChangesAsync();
-                TempData["success"] = "Category Edited Succesfully.";
-                return RedirectToPage("Index");
-            }
-            return Page();
+            ModelState.AddModelError(string.Empty, "The Displayorder cannot Exactly match the name.");
         }
+        if (ModelState.IsValid)
+        {
+            _unitOfWork.Category.Update(Category);
+            _unitOfWork.Save();
+            TempData["success"] = "Category Edited Succesfully.";
+            return RedirectToPage("Index");
+        }
+        return Page();
+    }
 }
