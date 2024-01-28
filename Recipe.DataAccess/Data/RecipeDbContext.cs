@@ -14,5 +14,8 @@ public class RecipeDbContext : DbContext
         
     }
     public DbSet<Category> Category { get; set; }
+    public DbSet<Models.Recipe> Recipe { get; set; }
+    public DbSet<Comment> Comment { get; set; }
+    public DbSet<Rating> Rating { get; set; }
     
 }
