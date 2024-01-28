@@ -1,16 +1,18 @@
 @page
-@model razor_recipes.Pages.Admin.Categories.EditModel;
+@model razor_recipes.Pages.Admin.Categories.UpsertModel
 @{
-    ViewData["Titel"] = "Edit";
+    ViewData["Title"] = (Model.Category.Id == 0 ? "Create" : "Update") + " Category";
 }
+
+
 <div class="container border border-1 p-5">
     <h3>@ViewData["Title"]</h3>
     <hr>
     <div class="row">
-        <form method="post">
+        <form action="" method="post">
             <input hidden asp-for ="Category.Id">
             <div class="mb-3">
-                <div  class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                 <label class="form-label" asp-for="Category.Name">Name</label>
                 <input class="form-control" asp-for="Category.Name">
                 <span asp-validation-for="Category.Name" class="text-danger"></span>
@@ -20,7 +22,7 @@
                 <input class="form-control" asp-for="Category.DisplayOrder">
                 <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 150px;">Update</button>
+            <button type="submit" class="btn btn-primary" style="width: 150px;">@(Model.Category.Id == 0 ? "Create" : "Update")</button>
         </form>
     </div>
 </div>
@@ -28,6 +30,6 @@
 @section Scripts
 {
     @{
-        <partial name="_ValidationScriptsPartial"/>
+        <partial name="_ValidationScriptsPartial" />
     }
 }

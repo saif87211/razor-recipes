@@ -11,7 +11,7 @@
             <hr/>
         </div>
         <div class="col-6">
-            <a asp-page="create" class="btn btn-primary"><i class="bi bi-plus-lg"></i>&nbsp;Create</a>
+            <a asp-page="Upsert" class="btn btn-primary"><i class="bi bi-plus-lg"></i>&nbsp;Create</a>
         </div>
     </div>
     <div class="row">
@@ -30,7 +30,7 @@
                         <td>@Category.Name</td>
                         <td>@Category.DisplayOrder</td>
                         <td>
-                            <a asp-page="Edit" asp-route-id="@Category.Id" class="btn btn-primary mx-2">
+                            <a asp-page="Upsert" asp-route-id="@Category.Id" class="btn btn-primary mx-2">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                             <a asp-page="Delete" asp-route-id="@Category.Id" class="btn btn-danger mx-2">
