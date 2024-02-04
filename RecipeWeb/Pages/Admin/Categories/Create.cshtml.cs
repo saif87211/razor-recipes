@@ -19,16 +19,16 @@ namespace razor_recipes.Pages.Admin.Categories
         {
         }
 
-        public async Task<IActionResult> OnPost()
+        public IActionResult OnPost()
         {
             if(Category.Name == Category.DisplayOrder.ToString())
             {
-                ModelState.AddModelError(string.Empty,"The Displayorder cannot Exactly match the name.");
+                ModelState.AddModelError(string.Empty,"The Display order cannot Exactly match the name.");
             }
             if(ModelState.IsValid){
                 _unitOfWork.Category.Add(Category);
                 _unitOfWork.Save();
-                TempData["success"] = "Category Created Succesfully.";
+                TempData["success"] = "Category Created Successfully.";
                 return RedirectToPage("Index");
             }
             return Page();

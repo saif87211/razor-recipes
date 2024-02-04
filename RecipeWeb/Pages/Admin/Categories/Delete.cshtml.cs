@@ -19,7 +19,7 @@ public class DeleteModel : PageModel
         Category = _unitOfWork.Category.GetFirstOrDefault(c => c.Id == id);
     }
 
-    public async Task<IActionResult> OnPost()
+    public IActionResult OnPost()
     {
         var CategoryFromDb = _unitOfWork.Category.GetFirstOrDefault(c => c.Id == Category.Id);
         if (CategoryFromDb != null)

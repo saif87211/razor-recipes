@@ -39,9 +39,11 @@ body {
   position: absolute;
   z-index: 10;
 }
+
 .prev-category {
   left: -3px;
 }
+
 .next-category {
   right: -3px;
   top: 0;
@@ -56,9 +58,11 @@ body {
   font-weight: 600;
   background-color: #0000004f;
 }
+
 .main-prev-btn {
   left: 0;
 }
+
 .main-next-btn {
   right: 0;
 }
@@ -66,7 +70,8 @@ body {
 .slick-slide {
   position: relative;
 }
-.main-info{
+
+.main-info {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -76,7 +81,8 @@ body {
   text-align: center;
   color: white;
 }
-.bg-cover::before{
+
+.bg-cover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -89,18 +95,18 @@ body {
 }
 
 /******* BACKGROUND IMAGE PART *******/
-.bg-img{
-  background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0.94) 50%, rgba(255,255,255,0) 70%),url('/images/Background/bg-1.png');
+.bg-img {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 39%, rgba(255, 255, 255, 0.94) 50%, rgba(255, 255, 255, 0) 70%), url('/images/Background/bg-1.png');
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.about-cont{
+.about-cont {
   font-size: 1.4rem;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -117,7 +123,7 @@ a{
   transform: scale(1.1);
 }
 
-.social li a{
+.social li a {
   width: 40px;
   height: 40px;
   border: 1px solid #ddd;
@@ -129,9 +135,16 @@ a{
   transition: all 0.3s;
   font-size: 1.1rem;
 }
+
 .social li a:hover,
-.social li a:focus{
+.social li a:focus {
   background-color: #ddd;
   text-decoration: none;
   color: #555;
+}
+
+
+/******* RECIPE PAGE *******/
+.recipe-badge {
+  font-size: 0.9rem;
 }

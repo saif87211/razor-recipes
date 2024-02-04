@@ -1,0 +1,144 @@
+@page
+@model razor_recipes.Pages.Recipe
+@{
+    ViewData["Title"] = "Recipe";
+}
+
+<article class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="fw-bolder">Recipe Title</h1>
+                <div id="recipe-rating" class="my-3 d-flex">
+                    <div class="d-flex">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p>&nbsp;451 Reviews</p>
+                </div>
+                <!--- RECIPE DESCRITPION START --->
+                <p id="recipe-descritption" class="mb-3 font-weight-normal">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab illum quibusdam, culpa deleniti omnis
+                    odio porro, labore eaque, dignissimos voluptatem deserunt eveniet. Deleniti expedita quos numquam
+                    est necessitatibus in impedit?
+                </p>
+                <!--- RECIPE DESCRITPION END --->
+
+                <p id="recipe-maker" class="mx-2">
+                    <small>Updated on January 16, 2023</small>
+                </p>
+                <img src="~/images/Slider/Slider-1.jpg" alt="recipe" class="img-fluid">
+                <div class="container my-3">
+
+                    <!--- RECIPE TOTAL INFO START --->
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">Prepartion time : <span
+                                        class="recipe-badge badge text-bg-info p-1"> 45 Mins</span>
+                                </li>
+                                <li class="list-group-item">Cooking Time: <span
+                                        class="recipe-badge badge text-bg-info p-1"> 45 Mins</span>
+                                </li>
+                                <li class="list-group-item">Servings: <span
+                                        class="recipe-badge badge text-bg-info p-1">4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- RECIPE TOTAL INFO END --->
+
+                    <!--- RECIPE INGREDIENTS START --->
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="fw-bold py-3">Ingredients</h2>
+                            <ul class="recipe-ingredients">
+                                <li class="ingredient">An item</li>
+                                <li class="ingredient">A second item</li>
+                                <li class="ingredient">A third item</li>
+                                <li class="ingredient">A fourth item</li>
+                                <li class="ingredient">And a fifth one</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- RECIPE INGREDIENTS END --->
+
+                    <!--- RECIPE STEPS START --->
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="fw-bold py-3">Directions</h2>
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item p-3">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum expedita quia, natus
+                                    saepe rem vel cupiditate quis nisi, consequuntur?
+                                </li>
+                                <li class="list-group-item p-3">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum expedita quia, natus
+                                    saepe rem vel cupiditate quis nisi, consequuntur?
+                                </li>
+                                <li class="list-group-item p-3">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum expedita quia, natus
+                                    saepe rem vel cupiditate quis nisi, consequuntur?
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!--- RECIPE STEPS END --->
+
+                    <p class="d-inline-flex gap-3 my-4">
+                        <a href="" class="btn btn-outline-primary rounded-0 px-5 fw-bold">Share&nbsp;<i
+                                class="bi bi-share"></i></a>
+                        <a href="" class="btn btn-outline-primary rounded-0 px-5 fw-bold">Print&nbsp;<i
+                                class="bi bi-printer"></i></a>
+                    </p>
+
+                    <hr>
+
+                    <!--- USER COMMENT START --->
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="fw-bold py-3">Reviews(451)</h2>
+                            <p class="my-2">Check out our Community Guidelines about reviews.</p>
+                        </div>
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Share your experience to help others.
+                            </div>
+                            <div class="my-2">
+                                <div class="btn btn-primary rounded-0 px-2" role="button">
+                                    Add Rating Review
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body my-3">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-start my-2">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold my-1 py-1">
+                                            <span class="bi bi-person-circle"></span>&nbsp;James Vogan
+                                        </div>
+                                        <div class="d-flex">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="my-1">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum molestiae iste
+                                            totam repellendus ipsum fugit temporibus modi, id culpa iusto!
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- USER COMMENT END --->
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
