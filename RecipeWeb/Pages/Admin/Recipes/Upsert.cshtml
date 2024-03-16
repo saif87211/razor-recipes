@@ -1,0 +1,60 @@
+@page
+@model razor_recipes.Pages.Admin.Recipes.Upsert
+@{
+    ViewData["Title"] = "Create Category";
+}
+
+
+<div class="container border border-1 p-5">
+    <h3>@ViewData["Title"]</h3>
+    <hr>
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <div  class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <label class="form-label" asp-for="Recipe.Title">Recipe Title</label>
+                <input class="form-control" asp-for="Recipe.Title">
+                <span asp-validation-for="Recipe.Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <div  class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <label class="form-label" asp-for="Recipe.Description">Recipe Description</label>
+                <textarea id="recipe-description" class="form-control" asp-for="Recipe.Description"></textarea>
+                <span asp-validation-for="Recipe.Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Recipe.Ingredients">Ingredients</label>
+                <input class="form-control" asp-for="Recipe.Ingredients">
+                <span asp-validation-for="Recipe.Ingredients" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Recipe.Instructions">Instructions</label>
+                <input class="form-control" asp-for="Recipe.Instructions">
+                <span asp-validation-for="Recipe.Instructions" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Recipe.CookingTime">Esitmeted Cook Time</label>
+                <input class="form-control" asp-for="Recipe.CookingTime">
+                <span asp-validation-for="Recipe.CookingTime" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="Recipe.Image">Recipe Image</label>
+                <input id="uploadbox" class="form-control" type="file" >
+            </div>
+            @* TO DO : Add Category  *@
+            <button type="submit" class="btn btn-primary" style="width: 150px;">Create</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $("#recipe-description").trumbowyg({
+            autogrow:true
+        });
+    </script>
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

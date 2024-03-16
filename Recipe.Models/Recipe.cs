@@ -11,6 +11,7 @@ public class Recipe
     public string Description { get; set; } = null!;
     public string Ingredients { get; set; } = null!;
     public string Instructions { get; set; } = null!;
+    public string Image { get; set; }
     [Required]
     public int CookingTime { get; set; }
     [ForeignKey("Author")]

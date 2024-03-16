@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace razor_recipes.Pages
 {
-    public class Recipe : PageModel
+    public class RecipeBlog : PageModel
     {
-        private readonly ILogger<Recipe> _logger;
+        private readonly ILogger<RecipeBlog> _logger;
 
-        public Recipe(ILogger<Recipe> logger)
+        public RecipeBlog(ILogger<RecipeBlog> logger)
         {
             _logger = logger;
         }
